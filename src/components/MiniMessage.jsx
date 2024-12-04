@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MutipleSate from "./MutipleSate";
+import UpdatingObjectInState from "./UpdatingObjectInState";
 
 const MiniMessage = () => {
   
