@@ -1,16 +1,17 @@
 import React, { useState } from "react";
+import MutipleSate from "./MutipleSate";
 
 const MiniMessage = () => {
+  
+   const [to,setTo] = useState('Alice');
+   const [message,setMessage] = useState('Hello');
 
-    const [to,setTo] = useState('Alice');
-    const [message,setMessage] = useState('Hello');
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setTimeout(() => {
-            alert(`You said ${message} to ${to}`);
-        },2000)
-    }
+   const handleSubmit = (e) => {
+      e.preventDefault();
+      setTimeout(() => {
+            alert(`You Send ${message} To ${to}`);
+      },2000)
+   }
 
   return (
     <>
@@ -22,7 +23,7 @@ const MiniMessage = () => {
         >
           This is the Mini Message app Logic section
         </h1>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+        <form  onSubmit={handleSubmit} className="flex flex-col gap-2">
           <label htmlFor="#">
             To:{" "}
             <select
@@ -58,6 +59,10 @@ const MiniMessage = () => {
             Send
           </button>
         </form>
+        <br />
+        <hr />
+        <br />
+        <MutipleSate/>
       </div>
     </>
   );
