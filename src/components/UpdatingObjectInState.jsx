@@ -1,49 +1,48 @@
 import React, { useState } from "react";
 
 const UpdatingObjectInState = () => {
-  const [person, setPerson] = useState({
-    name: "Niki de Sait Phale",
-    artwork: {
-      title: "Blur Nana",
-      city: "Hamberg",
-      imgae: "https://i.imgur.com/Sd1AgUOm.jpg",
-    },
-  });
 
-  const handleNameChange = (e) => {
-    setPerson({
-      ...person,
-      name: e.target.value,
-    });
-  };
-  const handleTitleChange = (e) => {
-    setPerson({
-        ...person,
+    const [person, setPerson] = useState({
+        name:'Akshay ParamaSivan',
         artwork:{
-            ...person.artwork,
-            title:e.target.value
-        }
+            title:'Neela Tamara',
+            city:'Tirur',
+            image: "https://i.imgur.com/Sd1AgUOm.jpg",
+        },
     });
-  }
-  const handleCityChange = (e) => {
-    setPerson({
-        ...person,
-        artwork:{
-            ...person.artwork,
-            city:e.target.value
-        }
-    });
-  }
-
-  const handleImageChange = (e) => {
-    setPerson({
-        ...person,
-        artwork:{
-            ...person.artwork,
-            imgae:e.target.value
-        }
-    });
-  }
+    const handleNameChange = (e) => {
+        setPerson({
+            ...person,
+            name:e.target.value
+        });
+    };
+    const handleTitleChange = (e) => {
+        setPerson({
+            ...person,
+            artwork:{
+                ...person.artwork,
+                title:e.target.value
+            }
+        });
+    };
+    const handleCityChange = (e) => {
+        setPerson({
+            ...person,
+            artwork:{
+                ...person.artwork,
+                city:e.target.value
+            }
+        });
+    };
+    const handleImageChange = (e) => {
+        setPerson({
+            ...person,
+            artwork:{
+                ...person.artwork,
+                image:e.target.value
+            }
+        });
+    };
 
   return (
     <div className="min-h-screen bg-slate-900 py-2 text-green-300 flex flex-col gap-4">
@@ -80,7 +79,7 @@ const UpdatingObjectInState = () => {
       <label>
         Image:{" "}
         <input
-          value={person.artwork.imgae}
+          value={person.artwork.image}
           onChange={handleImageChange}
           className=" px-1 text-gray-900"
           placeholder="enter the art url..."
@@ -91,10 +90,10 @@ const UpdatingObjectInState = () => {
         <h1>
           <i className="font-bold">{person.artwork.title}</i> by {person.name}
         </h1>
-        <h2>(Located in {person.artwork.city} )</h2>
+        <h2>(Located in {person.artwork.city})</h2>
         <img
            className="rounded-lg"
-           src={person.artwork.imgae} 
+           src={person.artwork.image}
            alt={person.artwork.title} />
       </div>
     </div>
