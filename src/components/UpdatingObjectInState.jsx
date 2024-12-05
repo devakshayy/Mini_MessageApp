@@ -5,10 +5,10 @@ const UpdatingObjectInState = () => {
 
     
     const [person, setPerson] = useState({
-      name: 'Akshay',
+      name: 'Sundar Pichai',
       artwork: {
         title: 'Google Logo',
-        city: 'Malappuram, Kerala',
+        city: 'New Delhi, India',
         image: "https://53.fs1.hubspotusercontent-na1.net/hub/53/hubfs/image8-2.jpg?width=600&name=image8-2.jpg",
       }
     });

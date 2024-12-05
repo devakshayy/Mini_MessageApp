@@ -1,37 +1,38 @@
 import React from 'react'
-import { useImmer } from 'use-immer';
+import {useImmer} from 'use-immer'
+
 
 const UseImmer = () => {
+    
     const [person, setPerson] = useImmer({
-        name: 'Akshay',
+        name:'Elon Musk',
         artwork: {
-          title: 'Google Logo',
-          city: 'Malappuram, Kerala',
-          image: "https://i.pinimg.com/736x/d4/7e/f2/d47ef2cdbb019f4e8e4aeb2343cd2863.jpg",
+            title: 'SpaceX Logo',
+            city: 'California,America',
+            image: "https://i.pinimg.com/736x/d4/7e/f2/d47ef2cdbb019f4e8e4aeb2343cd2863.jpg",
         }
-      });
+    });
+    const handleNameChange = (e) => {
+        setPerson(draft => {
+            draft.name = e.target.value;
+        });
+    };
+    const handleTitleChange = (e) => {
+        setPerson(draft => {
+            draft.artwork.title = e.target.value;
+        });
+    };
+    const handleCityChange = (e) => {
+        setPerson(draft => {
+            draft.artwork.city = e.target.value;
+        });
+    };
+    const handleImageChange = (e) => {
+        setPerson(draft => {
+            draft.artwork.image = e.target.value;
+        })
+    }   
       
-      const handleNameChange = (e) => {
-      setPerson(draft => {
-        draft.name = e.target.value;
-      });
-      };
-      const handleTitleChange = (e) => {
-      setPerson(draft => {
-        draft.artwork.title = e.target.value;
-      });
-      };
-      const handleCityChange = (e) => {
-      setPerson(draft => {
-        draft.artwork.city = e.target.value;
-      });
-      };
-      const handleImageChange = (e) => {
-      setPerson(draft => {
-        draft.artwork.image = e.target.value;
-      })
-      };
-
     return (
       <div className="min-h-screen bg-slate-900 py-2 text-green-300 flex flex-col gap-4">
         <h1 className='text-3xl text-yellow-400'>Here I'm Using the Immer to render the copy instead of spread Operator</h1>
@@ -92,3 +93,6 @@ const UseImmer = () => {
   };
 
 export default UseImmer
+
+// first we want to install use-immer and immer from npm instll
+// after that import that like import {useImmer} from 'use-immer';
