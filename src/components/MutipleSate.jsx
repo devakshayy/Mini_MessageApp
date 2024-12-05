@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Toolbar from './Toolbar';
 
 const MutipleSate = () => {
     const [score,setScore] = useState(0);
@@ -36,6 +37,8 @@ const MutipleSate = () => {
                            "
           >+ 3</button>
           <h1>Scorer : {score}</h1>
+          <hr />
+          <Toolbar/>
     </div>
   )
 }
