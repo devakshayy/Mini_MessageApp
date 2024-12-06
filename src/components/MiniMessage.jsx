@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MutipleSate from "./MutipleSate";
-import UpdatingObjectInState from "./UpdatingObjectInState";
+import FeedbackMsg from "./FeedbackMsg";
 
 const MiniMessage = () => {
   
@@ -16,7 +16,8 @@ const MiniMessage = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-slate-800 text-white p-4">
+      <div className="flex">
+      <div className="min-h-screen w-1/2 bg-slate-800 text-white p-4">
         <h1
           className="font-bold 
                    uppercase 
@@ -64,6 +65,8 @@ const MiniMessage = () => {
         <hr />
         <br />
         <MutipleSate/>
+      </div>
+        <FeedbackMsg/>
       </div>
     </>
   );
